@@ -1,25 +1,26 @@
 # Description
 
-I tried to install the latest Paper-QA2, first through the GitHub repository and then through PyPI. Unfortunately, in 
-both cases, the CLI was broken, but the Python API was functioning without problems. That's why I decided to write a 
-Python script to emulate the CLI. Of course, it doesn't retain all the command-line options but includes the most 
-important ones.
+I attempted to install the latest version of Paper-QA2, first through the 
+[GitHub repository](https://github.com/Future-House/paper-qa) and then via PyPI. 
+Unfortunately, as of September 21, 2024, the CLI was broken in both cases, although the Python API worked without any 
+issues. Consequently, I decided to create a Python script to emulate the CLI. While this script doesn’t include all the 
+command-line options, it does cover the most essential ones.
 
-Below I describe how to install it and run a simple example using the included sample PDF file.
+In the following sections, I will outline how to install Paper-QA2 and demonstrate a simple example using the included 
+sample PDF file.
 
-My impression of Paper-QA2 is that it answers questions thoroughly without making up stories like ChatGPT. If it 
-doesn't know the answer or if it cannot find the answer in the provided papers, it will simply tell you "I don't know 
-the answer," which is appreciated. On the other hand, its answers lack general context because they are based only on 
-the given papers, not on the prior existing knowledge on which ChatGPT is trained. I also couldn't understand if it can
-somehow query an online repository of paper. So far it works for locally downloaded papers which limits its 
-context-knowledge.
+My overall impression of Paper-QA2 is positive; it answers questions thoroughly and avoids fabricating responses, 
+unlike ChatGPT. If it encounters a question it cannot answer or fails to find the information in the provided papers, 
+it simply states, "I don't know the answer," which I find commendable. However, the answers can lack broader context 
+because they are solely based on the documents provided, rather than on the extensive prior knowledge that ChatGPT 
+utilizes. Additionally, I am uncertain whether Paper-QA2 can query an online repository of papers, as it currently only 
+operates with locally downloaded files, which limits its contextual knowledge.
 
-Another minor flaw is that it requires a separate subscription to the OpenAI API; if you have a subscription to 
-ChatGPT, then it's useless for Paper-QA2. Of course, there is an option to install a local LLM, but I didn't dare to 
-delve into this adventure. I have already spent enough time making Paper-QA2 work, and besides, I doubt the 
-capabilities of the open-source LLM provided as an alternative to OpenAI's API on GitHub of the 
-[original distribution](https://github.com/Future-House/paper-qa).
-
+Another minor drawback is that Paper-QA2 requires a separate subscription to the OpenAI API. Therefore, if you already 
+have a subscription to ChatGPT, it won't be beneficial for using Paper-QA2. While there is an option to install a local 
+LLM, I haven't ventured into that yet. I have already invested considerable time in getting Paper-QA2 to function 
+properly, and I have reservations about the capabilities of the open-source LLM offered as an alternative to OpenAI's 
+API on the [original GitHub distribution](https://github.com/Future-House/paper-qa).
 
 # Installation
 Follow these concise steps to set up a Conda environment with Python 3.12, install Paper-QA2 from PyPI, and configure 
