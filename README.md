@@ -1,10 +1,15 @@
 # Description
 
-I attempted to install the latest version of Paper-QA2, first through the 
-[GitHub repository](https://github.com/Future-House/paper-qa) and then via PyPI. 
-Unfortunately, as of September 21, 2024, the CLI was broken in both cases, although the Python API worked without any 
-issues. Consequently, I decided to create a Python script to emulate the CLI. While this script doesn’t include all the 
-command-line options, it does cover the most essential ones.
+
+Initially, I attempted to install the latest version of Paper-QA2 with Python 3.12, first through the 
+[GitHub repository](https://github.com/Future-House/paper-qa) and then via PyPI.
+Unfortunately, as of September 21, 2024, the CLI was broken in both cases. Specifically, the `Docs` class was 
+problematic. Queyring via `ask` worked fine. So, I decided to create a Python script to emulate the CLI. While 
+this script doesn’t include all the command-line options, it does cover the most essential ones, but also provides
+extra useful information than the CLI does, like the amount $ spent in each query and references.
+Later I tried Python 3.11, with which the CLI is fully functional, but the script I started writing retains some unique
+functionality that is available only through the API.
+
 
 In the following sections, I will outline how to install Paper-QA2 and demonstrate a simple example using the included 
 sample PDF file.
@@ -30,7 +35,7 @@ the `run_paperqa2_Py3.12.py` script to run from any location.
 Open your terminal and execute the following commands:
 
 ```bash
-conda create -n paperqa_env python=3.12
+conda create -n paperqa_env python=3.11
 conda activate paperqa_env
 ```
 
@@ -43,6 +48,14 @@ pip install openai
 pip install paper-qa
 pip install colorama
 ```
+
+You are now ready to use Paper-QA2 through the CLI. For example, try:
+
+```bash
+pqa ask "What are the implications of SITAR for large proteins?"
+```
+
+If you want to explore extra functionalities that are available only through the API, then continue reading.
 
 ## 3. Prepare the Scripts Directory and Move the Script
 Create the project directory:
