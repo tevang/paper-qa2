@@ -52,6 +52,7 @@ pip install colorama
 You are now ready to use Paper-QA2 through the CLI. For example, try:
 
 ```bash
+export OPENAI_API_KEY='put key here'
 pqa ask "What are the implications of SITAR for large proteins?"
 ```
 
